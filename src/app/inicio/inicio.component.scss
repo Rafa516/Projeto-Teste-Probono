@@ -1,0 +1,44 @@
+.inicio{
+    text-align: center;
+    padding-top: 12%;
+
+}
+.app-content {
+    min-height: calc(100vh - 110px);
+    background-color: white
+     
+  }
+  .header-toolbar {
+    justify-content: space-between;
+    background-color:#005d94;
+    color: white;
+  }
+  .buttonForm{
+      height: 50px;
+      width: 100px;
+      margin-top: 10%;
+      margin-left: 2%;
+  }
+ 
+  .card{
+    background-color:#FAFAFA;
+  }
+
+  
+  
+  @media screen and (min-width: 525px) {
+   
+  }
+  
+  @media screen and (min-width: 800px) {
+   
+  }
+  
+  @media screen and (min-width: 1300px) {
+    .buttonForm{
+      height: 50px;
+      width: 200px;
+      margin-top: 5%;
+      margin-left: 4%;
+    }
+    }

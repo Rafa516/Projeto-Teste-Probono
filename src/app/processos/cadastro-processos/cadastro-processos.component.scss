@@ -1,0 +1,26 @@
+.app-content {
+  min-height: calc(100vh - 110px);
+  background-color:white
+}
+.card{
+  background-color:#FAFAFA;
+  margin-top: 5%;;
+}
+.tolbar{
+  background-color: #FAFAFA;
+  color: black;
+}
+.buttons{
+  height: 40px;
+  width: 120px;
+  margin-top: 10%;
+  margin-left: 16%;
+}
+@media screen and (min-width: 1300px) {
+  
+  .buttons{
+  margin-left: 20%;
+  height: 40px;
+  width: 150px;
+  }
+}

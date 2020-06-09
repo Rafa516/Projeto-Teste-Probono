@@ -1,0 +1,32 @@
+<app-topo></app-topo>
+<mat-toolbar class="tolbar">{{textoToolbar}} Processo</mat-toolbar>
+<div class="app-content">
+  <div class="main-div">
+    <mat-card class=" card center width50" *ngIf="cadastro">
+      <form autocomplete="off" novalidate [formGroup]="cadastro" (ngSubmit)="submit()" (ngReset)="reiniciarForm()">
+        <mat-card-content>
+          <app-input-text titulo="Processo *" controlName="titulo" [formGroup]="cadastro"></app-input-text>
+          <app-input-date titulo="Ínicio do Processo *" controlName="data" [formGroup]="cadastro"></app-input-date>
+          <app-input-textarea titulo="Descrição" controlName="descricao" [formGroup]="cadastro"></app-input-textarea>
+          <app-input-select titulo="Natureza *" [opcoes]="tipos" controlName="tipo" [formGroup]="cadastro">
+          </app-input-select>
+        </mat-card-content>
+        
+        <button *ngIf="cadastro; else botaoEditar" class='buttons' type="submit" color="primary" mat-raised-button>
+          <mat-icon >save</mat-icon>&nbsp;&nbsp;{{textoBotao}}
+        </button>
+        <button class='buttons' type="reset" color="warn" mat-raised-button >
+          <mat-icon>clear</mat-icon>&nbsp;&nbsp;Limpar
+        </button>
+
+        <ng-template #botaoEditar>
+          <button class='buttons' type="submit" color="primary" mat-raised-button>
+            <mat-icon >autorenew</mat-icon>&nbsp;&nbsp;{{textoBotao}}
+          </button>
+        </ng-template>
+      </form>
+
+
+    </mat-card>
+  </div>
+</div>

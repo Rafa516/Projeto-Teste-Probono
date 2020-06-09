@@ -1,0 +1,72 @@
+.login{
+    text-align: center;
+    padding-top: 10%;
+
+}
+.app-content {
+    min-height: calc(100vh - 110px);
+    background-color: white;  
+  }
+  .alert{
+    font-size: 11px;
+    color: red;
+    padding-left: 80px;
+}
+
+.alert1{
+  font-size: 11px;
+  color: red;
+  padding-left: 68px;
+}
+.alert2{
+  font-size: 11px;
+  color: red;
+  padding-left: 76px;
+}
+ 
+ 
+  .header-toolbar {
+    justify-content: space-between;
+    background-color:#005d94;
+    color:white
+  }
+
+  .buttonA{
+    height: 40px;
+    width: 120px;
+    margin-top: 10%;
+  }
+ 
+  
+  .card{
+    background-color:#FAFAFA;
+    width: 70%;
+  }
+  
+  @media screen and (min-width: 525px) {
+   
+  }
+  
+  @media screen and (min-width: 800px) {
+   
+  }
+  
+ @media screen and (min-width: 1300px) {
+    .buttonA{
+      height: 40px;
+      width: 150px;
+      margin-top: 10px;
+    }
+    .title{
+      margin-left: 40%;
+    }
+    .login{
+      text-align: center;
+      padding-top: 8%;
+  
+   }
+   .card{
+    background-color:#FAFAFA;
+    width: 40%;
+  }
+}

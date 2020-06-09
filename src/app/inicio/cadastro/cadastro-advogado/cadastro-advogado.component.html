@@ -1,0 +1,65 @@
+<mat-sidenav-container>
+  <mat-sidenav-content>
+    <mat-toolbar class="header-toolbar">
+      <button (click)='voltar()' class='buttonTop' mat-icon-button>
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <span>Lista de Processos</span>
+      <button mat-icon-button>
+        <mat-icon></mat-icon>
+      </button>
+    </mat-toolbar>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+
+
+
+<div class="app-content">
+  <div class='login'>
+    <mat-card class=" card center width50">
+      <span>Cadastro Advogado</span>
+      <br>
+
+      <form [formGroup]="loginForm" (submit)="cadastraAdvogado()" novalidate>
+        <mat-form-field>
+          <input matInput placeholder="Nome" formControlName="nome">
+
+          <mat-icon color='primary' matSuffix>person</mat-icon>
+          <div *ngIf="!loginForm.controls.nome.valid">
+            <p class="alert">Campo Obrigatório.</p>
+          </div>
+        </mat-form-field><br>
+        <mat-form-field>
+          <input matInput placeholder="Email" type='email'formControlName="email">
+          <mat-icon color='primary' matSuffix>alternate_email</mat-icon>
+         
+          <div *ngIf="!loginForm.controls.email.valid">
+            <p class="alert1">Digite um email válido.</p>
+          </div>
+        </mat-form-field><br>
+
+        <mat-form-field>
+          <input matInput placeholder="Senha" type='password' formControlName="senha">
+          <mat-icon color='primary' matSuffix>lock</mat-icon>
+          <div *ngIf="!loginForm.controls.senha.valid">
+            <p class="alert2">Mínimo 6 caracteres.</p>
+          </div>
+        </mat-form-field><br>
+        <mat-form-field>
+          <input matInput placeholder="Confirmar Senha" type='password' formControlName="confirmaSenha">
+          <mat-icon color='primary' matSuffix>lock</mat-icon>
+         
+        </mat-form-field><br>
+
+        <button class='buttonA' [disabled]="!loginForm.valid" color="primary" mat-raised-button>
+          <mat-icon>person_add</mat-icon>&nbsp;&nbsp;cadastrar
+        </button>
+      </form>
+
+
+
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+
+.app-content {
+  min-height: calc(100vh - 110px);
+  background-color: #FAFAFA;
+  color: red;
+
+  
+}
+.item{
+  color: black;
+  font-size: 18px;
+  padding-left: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.button{
+  height: 40px;
+  width: 120px;
+  margin-top: 10%;
+  margin-left: 11%;
+}
+@media screen and (min-width: 1300px) {
+  
+  .button{
+  height: 40px;
+  width: 150px;
+  margin-left: 25%;
+  }
+}

@@ -1,0 +1,38 @@
+<mat-sidenav-container>
+  <mat-sidenav-content>
+    <mat-toolbar class="header-toolbar">
+      <button (click)='voltar()' class='buttonTop' mat-icon-button>
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <span>Lista de Processos</span>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <div class="app-content">
+      <mat-list *ngIf="processos; else semRegistro">
+        <mat-list class='item'> <b>Título:</b> {{processos.titulo}} </mat-list>
+        <mat-list class='item'> <b>Data de Criação:</b> {{processos.data | date: 'dd/MM/yyyy' }} </mat-list>
+        <mat-list class='item'> <b>Tipo:</b> {{processos.tipo}} </mat-list>
+        <mat-list class='item'> <b>Descrição:</b><br> {{processos.descricao}} </mat-list>
+      </mat-list>
+
+      <ng-template #semRegistro>
+        <h1 class="full-width main-div"><b>Nenhum registro encontrado!</b></h1>
+      </ng-template>
+    </div>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>account_circle</mat-icon>
+        <span>Conta</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>settings</mat-icon>
+        <span>Configurações</span>
+      </button>
+      <button mat-menu-item (click)='logout()'>
+        <mat-icon>power_settings_new</mat-icon>
+        <span>deslogar</span>
+      </button>
+    </mat-menu>

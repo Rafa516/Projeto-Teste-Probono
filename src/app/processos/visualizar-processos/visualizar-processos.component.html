@@ -1,0 +1,25 @@
+<app-topo></app-topo>
+
+<div class="app-content">
+<mat-list  *ngIf="processos; else semRegistro">
+  <mat-list class='item'> <b>Título:</b> {{processos.titulo}} </mat-list>
+  <mat-list class='item'> <b>Data de Criação:</b> {{processos.data | date: 'dd/MM/yyyy' }} </mat-list>
+  <mat-list class='item'> <b>Tipo:</b>  {{processos.tipo}} </mat-list>
+  <mat-list class='item' > <b>Descrição:</b><br> {{processos.descricao}} </mat-list>
+  
+</mat-list>
+
+
+
+ 
+    <button class='button'color="primary" mat-raised-button (click)="editar()"><mat-icon>create</mat-icon>&nbsp;&nbsp;Editar</button>
+    <button class='button'color="warn" mat-raised-button (click)="excluir()"><mat-icon>delete</mat-icon>&nbsp;&nbsp;Excluir</button>
+ 
+
+
+
+
+<ng-template #semRegistro>
+  <h1 class="full-width main-div"><b>Nenhum registro encontrado!</b></h1>
+</ng-template>
+</div>

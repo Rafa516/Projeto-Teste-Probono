@@ -1,0 +1,73 @@
+.home-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - 20px);
+  justify-content: space-between;
+
+   padding: 10px;
+   
+  .home-card {
+    margin-bottom: 10px;
+    background-color:#FAFAFA;
+    color:black;
+  
+   
+
+  }
+
+  .subtitle{
+    color: black
+  }
+}
+.header-toolbar {
+  justify-content: space-between;
+  background-color:#005d94;
+  color:white
+}
+.app-content {
+  min-height: calc(100vh - 110px);
+  background-color:white;
+  color:red;
+
+  
+}
+.topo{
+  background-color:#FAFAFA;
+  color: black;
+}
+
+
+.filtro-listagem {
+  width: calc(100% - 50px);
+  background-color:#FAFAFA;
+  
+ 
+  
+
+}
+
+
+
+@media screen and (min-width: 525px) {
+  .home-content {
+    .home-card {
+      width: calc(50% - 52px);
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .home-content {
+    .home-card {
+      width: calc(33.333% - 52px);
+    }
+  }
+}
+
+@media screen and (min-width: 1300px) {
+    .home-content {
+      .home-card {
+        width: calc(25% - 52px);
+      }
+    }
+  }

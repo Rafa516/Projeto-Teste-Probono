@@ -1,0 +1,28 @@
+
+.app-content {
+    min-height: calc(100vh - 110px);
+    background-color:white;
+    color:red;
+    
+  
+    
+  }
+  .item{
+    color: black;
+    font-size: 18px;
+    padding-left: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  .card{
+    background-color:white;
+    text-align: center;
+    height: 50px;
+    margin-top: 20%;
+    
+  
+  }
+  .header-toolbar {
+    justify-content: space-between;
+    background-color:#005d94;
+    color:white
+  }

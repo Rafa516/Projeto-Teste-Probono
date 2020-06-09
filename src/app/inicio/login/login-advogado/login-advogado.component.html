@@ -1,0 +1,52 @@
+<mat-sidenav-container>
+  <mat-sidenav-content>
+    <mat-toolbar class="header-toolbar">
+      <button (click)='voltar()' class='buttonTop' mat-icon-button>
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <span>Lista de Processos</span>
+      <button mat-icon-button>
+        <mat-icon></mat-icon>
+      </button>
+    </mat-toolbar>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+
+
+
+<div class="app-content">
+  <div class='login'>
+    <mat-card class=" card center width50">
+      <span>Entre com o Email e a senha para iniciar</span>
+      <br>
+
+      <form>
+        <mat-form-field class="example-full-width">
+
+          <input matInput placeholder="Email">
+          <mat-icon color='primary' matSuffix>alternate_email</mat-icon>
+        </mat-form-field><br>
+
+        <mat-form-field class="example-full-width">
+
+          <input matInput placeholder="Senha">
+          <mat-icon color='primary' matSuffix>lock</mat-icon>
+         
+        </mat-form-field>
+      </form>
+      <button class='buttonA' color="primary" mat-raised-button (click)='login()'>
+        <mat-icon>login</mat-icon>&nbsp;&nbsp;Acessar
+      </button>
+      <button class='buttonA' color="warn" mat-raised-button (click)='cadastro()'>
+        <mat-icon>person_add</mat-icon>&nbsp;&nbsp;cadastrar
+      </button>
+   
+     
+        
+      
+
+    </mat-card>
+  </div>
+</div>

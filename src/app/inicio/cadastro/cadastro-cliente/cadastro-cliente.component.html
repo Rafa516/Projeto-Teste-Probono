@@ -1,0 +1,66 @@
+<mat-sidenav-container>
+  <mat-sidenav-content>
+    <mat-toolbar class="header-toolbar">
+      <button (click)='voltar()' class='buttonTop' mat-icon-button>
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <span>Lista de Processos</span>
+      <button mat-icon-button>
+        <mat-icon></mat-icon>
+      </button>
+    </mat-toolbar>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+
+
+
+<div class="app-content">
+  <div class='login'>
+    <mat-card class=" card center width50">
+      <span>Cadastro Cliente</span>
+      <br>
+
+      <form [formGroup]="loginForm" (submit)="cadastraCliente()" novalidate>
+        <mat-form-field>
+          <input matInput placeholder="Nome" formControlName="nome">
+
+          <mat-icon color='accent' matSuffix>person</mat-icon>
+          <div *ngIf="!loginForm.controls.nome.valid">
+            <p class="alert">Campo Obrigatório.</p>
+          </div>
+        </mat-form-field><br>
+        <mat-form-field>
+          <input matInput placeholder="CPF"  maxLength='14' type='text'formControlName="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+          >
+          <mat-icon color='accent' matSuffix>credit_card</mat-icon>
+         
+          <div *ngIf="!loginForm.controls.cpf.valid">
+            <p class="alert1">formato nnn.nnn.nnn-nn.</p>
+          </div>
+        </mat-form-field><br>
+
+        <mat-form-field>
+          <input matInput placeholder="Senha" type='password' formControlName="senha">
+          <mat-icon color='accent' matSuffix>lock</mat-icon>
+          <div *ngIf="!loginForm.controls.senha.valid">
+            <p class="alert2">Mínimo 6 caracteres.</p>
+          </div>
+        </mat-form-field><br>
+        <mat-form-field>
+          <input matInput placeholder="Confirmar Senha" type='password' formControlName="confirmaSenha">
+          <mat-icon color='accent' matSuffix>lock</mat-icon>
+         
+        </mat-form-field><br>
+
+        <button class='buttonA' [disabled]="!loginForm.valid" color="primary" mat-raised-button>
+          <mat-icon>person_add</mat-icon>&nbsp;&nbsp;cadastrar
+        </button>
+      </form>
+
+
+
+    </mat-card>
+  </div>
+</div>

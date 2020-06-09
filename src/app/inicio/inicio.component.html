@@ -1,0 +1,34 @@
+<mat-sidenav-container>
+  <mat-sidenav-content>
+    <mat-toolbar class="header-toolbar">
+      <button mat-icon-button>
+        <mat-icon></mat-icon>
+      </button>
+      <span>Lista de Processos</span>
+      <button mat-icon-button>
+        <mat-icon></mat-icon>
+      </button>
+    </mat-toolbar>
+
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+<div class="app-content">
+  <div class='inicio'>
+    <mat-card class=" card center width50">
+      <span>Essa aplicação foi desenvolvida com o intuito de otimizar, informar e esclarecer os tramites
+        dos processos envolvendo Srs. Advogados e Srs. clientes. </span><br>
+
+
+      <button class='buttonForm' color="primary" mat-raised-button
+        (click)='goLoginAdvogado()'>Advogados&nbsp;&nbsp;</button>
+      <button class='buttonForm' color="accent" mat-raised-button (click)='goLoginCliente()'>Clientes</button>
+
+
+
+    </mat-card>
+  </div>
+</div>
